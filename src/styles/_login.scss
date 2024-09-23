@@ -1,0 +1,112 @@
+// Define some color variables for easy customization
+$primary-color: #4a90e2;
+$background-color: #f0f0f0;
+$input-border-color: #ddd;
+$text-color: #333;
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $background-color;
+  padding: 20px;
+
+  .auth-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+
+   h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: $primary-color;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: $text-color;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid $input-border-color;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: $primary-color;
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: $primary-color;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    p {
+      text-align: center;
+      margin-top: 1rem;
+
+      .link {
+        color: $primary-color;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 10px;
+  }
+
+  .auth-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .btn {
+      padding: 0.65rem;
+      font-size: 0.9rem;
+    }
+  }
+}

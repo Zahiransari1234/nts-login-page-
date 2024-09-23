@@ -1,0 +1,66 @@
+// Define your color variables (you can use the palette you prefer)
+$primary-color: #16D5FF;
+$background-color: #E8F2F7;
+$text-color: #2D2D2D;
+$heading-color: #0A1F2C; // Dark Navy for the heading
+
+.home {
+  background-color: $background-color;
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    color: $heading-color;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid $primary-color;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+
+    // Add a subtle hover effect for headings
+    &:hover {
+      color: $primary-color;
+      border-color: darken($primary-color, 10%);
+    }
+  }
+
+  // Add some additional styling or spacing if necessary
+  .products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    // Example card styling for product items (if needed later)
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 300px;
+      margin: 1rem;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .home {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+}
